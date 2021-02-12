@@ -1,0 +1,366 @@
+/* gen by new.py at 2021-02-11 12:14:08.427101 */
+body {
+  background-color: #111;
+  color: #aaa;
+  font-family: monospace;
+  font-size: 11px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+/* images */
+
+
+.block__btn-chat-light { background: url('img/block__btn-chat-light.png'); }
+.block__btn-chat { background: url('img/block__btn-chat.png'); }
+.block__btn-mail { background: url('img/block__btn-mail.png'); }
+.block__btn-rating { background: url('img/block__btn-rating.png'); }
+.block__btn-to-univer { background: url('img/block__btn-to-univer.png'); }
+.block__friends { background: url('img/block__friends.png'); }
+.block__friends__btn-arrow-left { background: url('img/block__friends__btn-arrow-left.png'); }
+.block__friends__btn-arrow-right { background: url('img/block__friends__btn-arrow-right.png'); }
+.block__friends__icon { background: url('img/block__friends__icon.png'); }
+.block__friends__icon-default { background: url('img/block__friends__icon-default.png'); }
+.block__friends__icon-plus { background: url('img/block__friends__icon-plus.png'); }
+.girl { background: url('img/girl.png'); }
+.scene { background: url('img/scene.png'); }
+.rating { background: url('img/rating.png'); }
+.rating__btn-close { background: url('img/rating__btn-close.png'); }
+.rating__frame { background: url('img/rating__frame.png'); }
+.rating__frame-element-icon { background: url('img/rating__frame-element-icon.png'); }
+.rating__frame-element { background: url('img/rating__frame-element.png'); }
+.rating__frame-title { background: url('img/rating__frame-title.png'); }
+.rating__title { background: url('img/rating__title.png'); }
+.rating__title-text { background: url('img/rating__title-text.png'); }
+.male { background: url('img/male.png'); }
+.female { background: url('img/female.png'); }
+
+
+/* general */
+
+
+.btn {
+  cursor: pointer;
+}
+
+.btn.disabled {
+  pointer-events: none;
+}
+
+.main {
+  width: 980px;
+  height: 630px;
+  position: relative;
+}
+
+
+/* scene */
+
+
+.scene {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.girl {
+  width: 22px;
+  height: 69px;
+  position: absolute;
+  left: 444px;
+  top: 504px;
+  transform: translate(-50%, -100%);
+}
+
+.block {
+  width: inherit;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block > :first-child {
+  margin-left: 5px;
+}
+
+.block > :last-child {
+  margin-right: 15px;
+}
+
+.block__friends {
+  width: 536px;
+  height: 63px;
+  position: relative;
+}
+
+.btn.block__friends__btn-arrow-left {
+  width: 17px;
+  height: 30px;
+  position: absolute;
+  top: 17px;
+  left: 10px;
+}
+
+.block__friends__icons {
+  width: 474px;
+  height: 100%;
+  position: absolute;
+  left: 28px;
+  top: 0;
+  clip-path: inset(0px 0px 0px 0px);
+}
+
+.block__friends__icons-container {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition-property: left;
+  transition-duration: 1s;
+}
+
+.block__friends__icon {
+  width: 50px;
+  height: 51px;
+  margin: 0 5px;
+  flex-shrink: 0;
+}
+
+.block__friends__icon-default {
+  width: inherit;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.block__friends__icon-plus {
+  width: 23px;
+  height: 22px;
+  position: absolute;
+  left: 37px;
+  top: 5px;
+}
+
+.btn.block__friends__btn-arrow-right {
+  width: 17px;
+  height: 30px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+}
+
+.btn.block__btn-chat {
+  width: 68px;
+  height: 63px;
+}
+
+.btn.block__btn-chat:hover {
+  background: url('img/block__btn-chat-light.png');
+}
+
+.btn.block__btn-to-univer {
+  width: 207px;
+  height: 68px;
+}
+
+.btn.block__btn-mail {
+  width: 69px;
+  height: 65px;
+}
+
+.btn.block__btn-rating {
+  width: 66px;
+  height: 61px;
+}
+
+
+/* rating window */
+
+
+.rating-container {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  clip-path: inset(0 0 0 0);
+}
+
+.rating-container.disabled {
+  z-index: -1;
+}
+
+.rating-blank {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: black;
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+.rating-blank.hidden {
+  opacity: 0;
+}
+
+.rating {
+  width: 523px;
+  height: 466px;
+  position: absolute;
+  left: 238px;
+  top: 66px;
+  transition-property: top;
+  transition-duration: 1s;
+}
+
+.rating.hidden {
+  top: -500px;
+}
+
+.rating__btn-close {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+
+.rating__title {
+  width: 264px;
+  height: 33px;
+  position: absolute;
+  left: 124px;
+  top: 0;
+}
+
+.rating__title-text {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.rating__frame {
+  width: 464px;
+  height: 324px;
+  position: absolute;
+  left: 30px;
+  top: 108px;
+}
+
+.rating__frame-text {
+  color: white;
+  font-size: 16px;
+}
+
+.rating__frame-title {
+  width: 403px;
+  height: 29px;
+  position: absolute;
+  left: 33px;
+  top: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rating__frame-title-place {
+  width: 64px;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating__frame-title-name {
+  width: 226px;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 35px;
+}
+
+.rating__frame-title-exp {
+  width: auto;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.rating__frame-elements {
+  width: 403px;
+  height: 230px;
+  position: absolute;
+  left: 33px;
+  top: 66px;
+}
+
+.rating__frame-element {
+  width: 403px;
+  height: 27px;
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rating__frame-element-place {
+  width: 64px;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating__frame-element-icon {
+  width: 30px;
+  height: 29px;
+}
+
+.rating__frame-element-name {
+  width: 226px;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.rating__frame-element-name .is-friend {
+  color: yellow;
+  font-weight: bolder;
+}
+
+.rating__frame-element-exp {
+  width: auto;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+}
